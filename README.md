@@ -47,8 +47,6 @@ Copy one of the blocks in `projects.js`, edit it, and save. The **first** projec
 
 Search the project for `TODO`.
 
-- [ ] Your photo (replace `assets/photo-placeholder.svg`)
-- [ ] `assets/og-image.png` (1200×630) for link previews, then uncomment the `og:image` tag
 - [ ] A live demo link for Luzon Grid Dispatch, if you deploy it
 
 The résumé link points to LinkedIn on purpose: the PDF has a phone number on it.
