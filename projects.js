@@ -33,7 +33,7 @@ window.PROJECTS = [
       "Plain HTML, CSS, and JavaScript. The name snipper in the header is a nod to SnipURLnk.",
     tech: ["HTML", "CSS", "JavaScript"],
     image: null,
-    demo: null,
-    source: null, // TODO: set to this repo's URL once pushed
+    demo: null, // you're already on it
+    source: "https://github.com/martinipolice/martinipolice.github.io",
   },
 ];
