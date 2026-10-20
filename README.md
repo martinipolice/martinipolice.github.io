@@ -45,16 +45,13 @@ Copy one of the blocks in `projects.js`, edit it, and save. The **first** projec
 
 ## Things still to fill in
 
-Search the project for `TODO`. Placeholders are also highlighted in orange on the page.
+Search the project for `TODO`.
 
-- [ ] Email address in the contact section (two places in `index.html`)
-- [ ] LinkedIn URL
-- [ ] `assets/resume.pdf`
 - [ ] Your photo (replace `assets/photo-placeholder.svg`)
-- [ ] Hero pitch line and the About bio
-- [ ] Education entry in the timeline
 - [ ] `assets/og-image.png` (1200×630) for link previews, then uncomment the `og:image` tag
-- [ ] Live URL in `og:url` and in the "This portfolio" card once deployed
+- [ ] A live demo link for Luzon Grid Dispatch, if you deploy it
+
+The résumé link points to LinkedIn on purpose: the PDF has a phone number on it.
 
 ## Deploy to GitHub Pages
 

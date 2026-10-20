@@ -7,7 +7,7 @@ window.PROJECTS = [
     title: "SnipURLnk",
     summary: "Paste a long link, get a short one.",
     description:
-      "A URL shortener with custom aliases, QR codes, a 404 page with a stoppable countdown, and Google Safe Browsing checks that refuse unsafe links.",
+      "A URL shortener with custom aliases, QR codes, and Google Safe Browsing checks that refuse unsafe links. It rate-limits abuse, has a report and removal flow for bad links, and is covered by 104 pytest tests.",
     tech: ["Python", "Flask", "PostgreSQL", "pytest"],
     image: "assets/snipurlnk-qr.png",
     imageAlt: "SnipURLnk's QR code popup for a shortened link, with download, share, and copy buttons",
