@@ -4,7 +4,7 @@ My personal portfolio site. It's plain HTML, CSS, and JavaScript, with no framew
 
 ## The idea
 
-The site borrows its look from SnipURLnk: things get **snipped**.
+The site borrows its look from snipURlnk: things get **snipped**.
 
 - **Name snipper:** the "Snip my name" button cuts "Charles Gian Santos" down to "CGS" (the logo), the way a URL shortener would, and shows the before and after lengths. Click again to undo.
 - **Cut lines:** sections are separated by dashed "cut here" lines that a pair of scissors runs along the first time you scroll past.

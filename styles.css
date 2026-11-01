@@ -4,7 +4,7 @@
   - One accent, cut red: only on the scissors, the snip cut line, and the one "Email me" button.
   - Bricolage Grotesque: a grotesque with slightly odd, hand-made details, so a big name feels personal, not corporate.
   - IBM Plex Mono: only for literal code-ish things (URLs, the snipped string, years, tech lists).
-  - Dashed cut lines between sections: the identity motif, tied to SnipURLnk.
+  - Dashed cut lines between sections: the identity motif, tied to snipURlnk.
   - No shadows or cards: content sits flat on the page; images get a 1px border so screenshots don't bleed into the paper.
 */
 
@@ -221,7 +221,7 @@ p { margin: 0 0 1em; }
 
 /* Other projects: plain rows, lighter weight */
 .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 3fr); gap: 16px clamp(20px, 3vw, 40px); padding: 32px 0; border-bottom: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr); gap: 16px clamp(20px, 3vw, 40px); padding: 32px 0; border-bottom: 1px solid var(--line); }
 .row__title { font-size: 1.625rem; letter-spacing: -.025em; margin-bottom: 6px; }
 .row__summary { color: var(--muted); margin: 0; }
 .row .desc { margin-bottom: 12px; }
