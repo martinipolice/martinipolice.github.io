@@ -2,35 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com https://github-contributions-api.jogruber.de; frame-src 'self' https://martinipolice.github.io; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Charles Gian Santos | Portfolio</title>
-  <meta name="description" content="Charles Gian Santos is a CS student at UP Los Baños who builds things like a URL shortener in Flask and a browser fighting game.">
+  <title>Charles Gian Santos | I build what itches</title>
+  <meta name="description" content="Charles Gian Santos is a CS student at UP Los Baños who builds what he's curious about: a remote photobooth, a browser fighting game, a URL shortener, and more.">
 
   <!-- Open Graph (link previews) -->
+  <link rel="canonical" href="https://martinipolice.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Charles Gian Santos | Portfolio">
-  <meta property="og:description" content="I like building tech stuff. Here's some of it.">
+  <meta property="og:title" content="Charles Gian Santos | I build what itches">
+  <meta property="og:description" content="Scratch a ticket and see what my curiosity turned into.">
   <meta property="og:url" content="https://martinipolice.github.io/">
   <meta property="og:image" content="https://martinipolice.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Charles Gian Santos, CS at UP Los Baños and DOST-SEI scholar">
+  <meta property="og:image:alt" content="Charles Gian Santos: I build what itches">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffc42e">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Figtree:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Apply the saved theme before first paint so there's no flash -->
-  <script>
-    document.documentElement.classList.add('js');
-    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
-  </script>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,7 +38,7 @@
     <a class="nav__logo" href="#top" aria-label="Charles Gian Santos, back to top">cgs</a>
     <nav aria-label="Main">
       <ul class="nav__links">
-        <li><a href="#work">Work</a></li>
+        <li><a href="#itches">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -52,83 +50,70 @@
   </header>
 
   <main id="main">
-    <!-- HERO: the name snipper -->
     <section class="hero" id="top">
-      <p class="hero__hi">Hi, I'm</p>
-      <h1 class="snip" id="snip-name">Charles Gian Santos</h1>
-
-      <div class="snip__controls">
-        <button class="snip__btn" type="button" aria-pressed="false" aria-controls="snip-name">
-          <svg class="scissors" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path class="blade-a" d="M8.6 7.6 20 18"/><path class="blade-b" d="M8.6 16.4 20 6"/></svg>
-          <span class="snip__label">Snip my name</span>
-        </button>
-        <p class="snip__out" aria-live="polite">Too long? Shorten it the way snipURlnk would.</p>
-      </div>
-
-      <div class="hero__lede">
-        <p class="hero__line">I like building tech stuff.</p>
-        <p class="hero__pitch">CS student at UP Los Baños and DOST-SEI scholar. Lately: a browser fighting game, a survivors-like in Godot, and a URL shortener that refuses unsafe links.</p>
-        <a class="btn" href="mailto:charlessantospersonal@gmail.com">Email me</a>
+      <div class="hero__text">
+        <p class="hero__hi">Hi, I'm Charles Gian Santos.</p>
+        <h1 class="hero__title">I build what <span class="hero__hit">itches.</span></h1>
+        <p class="hero__lede">CS student at UP Los Baños and DOST-SEI scholar. When I get curious about something, I can't leave it alone until it exists. These are the tickets so far.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#itches">See the projects</a>
+          <a class="btn btn--ghost" href="mailto:charlessantospersonal@gmail.com">Email me</a>
+        </div>
+        <p class="hero__live"></p>
       </div>
     </section>
 
-    <div class="cut" aria-hidden="true"><span class="cut__line"></span><svg class="cut__scissors scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path class="blade-a" d="M8.6 7.6 20 18"/><path class="blade-b" d="M8.6 16.4 20 6"/></svg></div>
-
-    <!-- WORK (rendered from projects.js) -->
-    <section class="section work" id="work" aria-labelledby="work-title">
-      <h2 id="work-title" class="section__title">Things I've built</h2>
-      <div id="projects"></div>
+    <section class="section" id="itches" aria-labelledby="itches-title">
+      <p class="chapter">Chapter one</p>
+      <h2 id="itches-title" class="section__title">Itches I've scratched</h2>
+      <p class="section__lede">Every project started as a question I couldn't drop. Scratch the foil to see what it turned into.</p>
+      <div class="tickets" id="tickets"></div>
+      <aside class="next" aria-labelledby="next-title">
+        <p class="ticket__stub"><span>No. 07</span><span class="ticket__status">Next itch</span></p>
+        <h3 id="next-title" class="ticket__title">Pokémon card trend predictor</h3>
+        <p class="ticket__itch">Could I spot which Pokémon cards are about to take off before the market does?</p>
+        <p class="ticket__desc">Not built yet. Trading cards are already a hobby of mine, so this one is next: a tool that reads market trends and predicts where card prices are heading.</p>
+      </aside>
       <noscript><p>My projects are on <a href="https://github.com/martinipolice">GitHub</a>.</p></noscript>
     </section>
 
-    <div class="cut" aria-hidden="true"><span class="cut__line"></span><svg class="cut__scissors scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path class="blade-a" d="M8.6 7.6 20 18"/><path class="blade-b" d="M8.6 16.4 20 6"/></svg></div>
-
-    <!-- ABOUT: bio, toolkit, and timeline -->
     <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="about__main reveal">
+      <div class="about__main">
+        <p class="chapter">Chapter two</p>
         <h2 id="about-title" class="section__title">About me</h2>
-        <img class="about__photo" src="assets/photo.jpg" alt="Charles Gian Santos in a dark suit and red tie" width="400" height="400" loading="lazy">
-        <p>I'm a computer science student at UP Los Baños and a DOST-SEI scholar. I learn best by building: taking a problem apart until I understand how it really works, then shipping something people can click on.</p>
-        <p>snipURlnk started as "how hard can a URL shortener be?" and turned into 161 pytest tests, GitHub login, and rate limiting behind a proxy. Since then I've made a fighting game that runs in the browser, and I'm rebuilding my terminal RPG as a real-time game in Godot.</p>
-        <p>When I'm not coding, I'm playing trading card games or multiplayer games, usually with rock or metal playing in the background.</p>
+        <img class="about__photo" src="assets/photo.jpg" alt="Charles Gian Santos in a dark suit and red tie" width="440" height="440" decoding="async" loading="lazy">
+        <p class="about__big">I'm a computer science student at UP Los Baños and a DOST-SEI scholar. I learn by taking a problem apart until I understand how it really works, then shipping something people can click on.</p>
+        <p>My projects don't look alike because they don't start from a plan. They start from a thought that won't go away, like a fighting game full of brainrot or a photobooth for friends who are far apart.</p>
+        <p>When I'm not building, I'm playing trading card games or multiplayer games, usually with rock or metal in the background.</p>
       </div>
 
       <div class="about__side">
-        <div class="toolkit reveal">
-          <h3>What I build with</h3>
-          <dl>
-            <dt>Languages</dt><dd>Python, JavaScript, GDScript, Java, C, R, SQL, HTML &amp; CSS</dd>
-            <dt>Frameworks</dt><dd>Flask, Godot, Shiny, pytest</dd>
-            <dt>Data</dt><dd>PostgreSQL on Neon, SQLite</dd>
-            <dt>Tools</dt><dd>Git &amp; GitHub, Render, VS Code, Eclipse, RStudio</dd>
-          </dl>
-        </div>
+        <h3>What I build with</h3>
+        <dl class="tools">
+          <dt>Languages</dt><dd>Python, JavaScript, TypeScript, GDScript, Java, C, R, SQL, HTML &amp; CSS</dd>
+          <dt>Frameworks</dt><dd>Flask, SvelteKit, Godot, Shiny, pytest</dd>
+          <dt>Data</dt><dd>PostgreSQL on Neon, SQLite</dd>
+          <dt>Tools</dt><dd>Git &amp; GitHub, Cloudflare, Render, VS Code, Eclipse, RStudio</dd>
+        </dl>
 
-        <div class="journey reveal">
-          <h3>So far</h3>
-          <ol>
-            <li><span class="journey__when">Oct 2026</span><span>Cybersecurity certificate, Asian Development Bank Institute</span></li>
-            <li><span class="journey__when">2026</span><span>Field enumerator and data encoder, UPLB BIDANI Network Program</span></li>
-            <li><span class="journey__when">2025</span><span>BS Computer Science, UP Los Baños (DOST-SEI scholar)</span></li>
-            <li><span class="journey__when">2025</span><span>Administrative assistant intern, PrimeWater</span></li>
-            <li><span class="journey__when">2019–25</span><span>Tagaytay City Science National High School, with highest honors</span></li>
-          </ol>
-        </div>
+        <h3 id="contrib-title">GitHub activity</h3>
+        <figure class="contrib">
+          <div class="contrib__graph" id="contrib"></div>
+          <figcaption><a href="https://github.com/martinipolice" rel="noopener">See it on GitHub</a><span class="contrib__key" aria-hidden="true">Less <i></i><i></i><i></i><i></i><i></i> More</span></figcaption>
+        </figure>
       </div>
     </section>
 
-    <div class="cut" aria-hidden="true"><span class="cut__line"></span><svg class="cut__scissors scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path class="blade-a" d="M8.6 7.6 20 18"/><path class="blade-b" d="M8.6 16.4 20 6"/></svg></div>
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="contact__title reveal">Got a thing that needs building?</h2>
-      <p class="contact__lead reveal">Internships, freelance work, or a side project you want a second pair of hands on. I'm based in Los Baños, Laguna, and email is the fastest way to reach me.</p>
-      <div class="contact__email reveal">
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="chapter chapter--sun">Final chapter</p>
+      <h2 id="contact-title" class="contact__title">Got an itch?</h2>
+      <p class="contact__lead">Internships, collaborations, or a side project you can't stop thinking about. I'm based in Los Baños, Laguna, and email is the fastest way to reach me.</p>
+      <div class="contact__email">
         <a class="contact__mail" href="mailto:charlessantospersonal@gmail.com">charlessantospersonal@gmail.com</a>
         <button class="copy-btn" type="button" data-copy="charlessantospersonal@gmail.com">Copy</button>
         <span class="copy-status" role="status" aria-live="polite"></span>
       </div>
-      <ul class="contact__links reveal">
+      <ul class="contact__links">
         <li><a href="https://github.com/martinipolice" rel="me">GitHub</a></li>
         <!-- Résumé lives on LinkedIn so the phone number stays off the public site -->
         <li><a href="https://www.linkedin.com/in/charles-gian-santos-394507368" rel="me">LinkedIn and résumé</a></li>
@@ -137,7 +122,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year">2026</span> Charles Gian Santos</p>
+    <p>© <span id="year">2026</span> Charles Gian Santos. To be continued.</p>
     <a href="#top">Back to top</a>
   </footer>
 
